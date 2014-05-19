@@ -5,6 +5,8 @@ from django.core import validators
 from django.db import models
 from django.utils import timezone
 
+class Age(models.Model):
+    age = models.TextField(_('Age'), null=True, blank=True)
 
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(_('username'), max_length=30, unique=True,
